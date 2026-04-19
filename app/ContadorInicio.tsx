@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ParabensCena } from "../components/ParabensCena";
+import { ParabensCena } from "./components/ParabensCena";
 
 /**
- * Teste: `true` = contador em `/contador` usa só `DURACAO_CONTADOR_TESTE_MS` e depois abre parabéns.
+ * Teste: `true` = contador na raiz `/` usa só `DURACAO_CONTADOR_TESTE_MS` e depois abre parabéns.
  * `false` = data real até 19/04/2026 00h; se já for dia 19 (ou depois), espera `DURACAO_APOS_DATA_ALVO_MS`.
  */
 const EXIBIR_CONTEUDO_DE_TESTE_ANTES = true;
@@ -50,14 +50,12 @@ function BlocoNumero({
   );
 }
 
-export default function ContadorPage() {
+export function ContadorInicio() {
   const [msRestante, setMsRestante] = useState<number | null>(null);
   const fimContadorTesteRef = useRef<number | null>(null);
-  /** Só no modo real: fim da espera de 5s após já ter chegado ao dia 19 */
   const fimAtrasoAposAlvoRef = useRef<number | null>(null);
   const [parabensAnimado, setParabensAnimado] = useState(false);
   const [removerCamadaContador, setRemoverCamadaContador] = useState(false);
-  /** Modo real e já passou da meia-noite do dia 19 — contagem de 5s até parabéns */
   const [emEsperaAposAlvo, setEmEsperaAposAlvo] = useState(false);
 
   const carregando = msRestante === null;
