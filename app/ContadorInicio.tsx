@@ -7,7 +7,7 @@ import { ParabensCena } from "./components/ParabensCena";
  * Teste: `true` = contador na raiz `/` usa só `DURACAO_CONTADOR_TESTE_MS` e depois abre parabéns.
  * `false` = data real até 19/04/2026 00h; se já for dia 19 (ou depois), espera `DURACAO_APOS_DATA_ALVO_MS`.
  */
-const EXIBIR_CONTEUDO_DE_TESTE_ANTES = true;
+const EXIBIR_CONTEUDO_DE_TESTE_ANTES = false;
 
 const DURACAO_CONTADOR_TESTE_MS = 1_000;
 
