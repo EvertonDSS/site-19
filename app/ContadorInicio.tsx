@@ -146,9 +146,6 @@ export function ContadorInicio() {
         >
           <div className="w-full max-w-2xl space-y-6 text-center sm:space-y-8">
             <div className="space-y-2 sm:space-y-3">
-              <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-                Contagem regressiva até
-              </p>
               <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-3xl">
                 {EXIBIR_CONTEUDO_DE_TESTE_ANTES ? (
                   <>
@@ -167,10 +164,7 @@ export function ContadorInicio() {
                   </>
                 ) : (
                   <>
-                    19 de abril de 2026, 00h00
-                    <span className="mt-2 block text-base font-normal text-zinc-500 dark:text-zinc-400">
-                      (horário local do seu dispositivo)
-                    </span>
+
                   </>
                 )}
               </h1>

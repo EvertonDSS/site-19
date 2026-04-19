@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aniversário",
+    default: "Everton David",
     template: "%s",
   },
   description: "Contagem regressiva e parabéns",
